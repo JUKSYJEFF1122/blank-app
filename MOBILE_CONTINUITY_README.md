@@ -80,15 +80,26 @@ ccode 的**雲同步**是應用層級的自動功能：
 
 如果手機端需要查看這些文檔，請在 GitHub 網頁版查看相同分支 `claude/mobile-desktop-task-continuity-5BYId`。
 
+## Mission Control 當前狀態（2026-05-28）
+
+| 項目 | 狀態 | 詳情 |
+|------|------|------|
+| Windows TaskRoom 同步 | ✅ SYNCED_AND_VERIFIED | Lobster 於 20260528_180153 完成 7/7 檔案 + 8/8 規則驗證 |
+| Fallback Patch | ✅ IMPLEMENTED | WORKER_DISPATCH_TEMPLATE 強制注入已生效 |
+| 三層派工路由 | ✅ CONFIGURED | Bootstrap → Cross-Agent → Skill 全鏈完整 |
+| 手機端接續驗收 | 🔄 IN_PROGRESS | 本文件更新中 |
+| ccode Skill 派工實測 | ⏳ QUEUED | 13 Skills 中選 1 項實測完整流程 |
+
 ## 關鍵狀態確認
 
 | 項目 | 狀態 | 備註 |
 |------|------|------|
-| 最新 commit | e57dc44 | 已推送到遠端分支 |
-| 手機 Code 可見性 | ✅ 自動同步 | JUKSYJEEF1122/blank-app 最新代碼可見 |
+| 最新 commit | b49c080 | 已推送到遠端分支 |
+| 手機 Code 可見性 | ✅ 自動同步 | juksyjeff1122/blank-app 最新代碼可見 |
 | 手機 Dispatch 可見性 | ✅ 另行進入 | Dispatch tab 可派工新任務 |
 | 手機 Cowork 可見性 | ✅ 另行進入 | Cowork tab 可進行協作任務 |
 | PC 任務室同步到手機 | ❌ 不同步 | PC 本機任務室僅在 PC 端可見 |
+| Windows TaskRoom 同步 | ✅ VERIFIED | C:\Users\Jeff\Desktop\TaskRoom_Skill_Packs\ 同步完成 |
 | 治理規則生效範圍 | ✅ 全端 | CLAUDE.md 規則對所有派工生效 |
 
 ## 下次從手機建立任務的檢查清單
