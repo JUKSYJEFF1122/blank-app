@@ -16,8 +16,8 @@
 ## 當前 CURRENT_TASK_LOCK
 
 ```
-CURRENT_TASK: 手機端接續驗收
-STATUS: IN_PROGRESS
+CURRENT_TASK: 無（所有 QUEUED 任務已完成）
+STATUS: ALL_QUEUED_TASKS_COMPLETE
 LOCK_HOLDER: JUKSY_MISSION_CONTROL_CLAUDE_CODE_V2
 ```
 
@@ -34,17 +34,17 @@ LOCK_HOLDER: JUKSY_MISSION_CONTROL_CLAUDE_CODE_V2
 | Windows TaskRoom 同步包 | 2026-05-28 | ✅ PACKAGE_READY | commit b49c080 |
 | Windows TaskRoom 本機同步驗收 | 2026-05-28 | ✅ SYNCED_AND_VERIFIED | Lobster 執行，7/7 + 8/8 通過 |
 | 手機端接續驗收 | 2026-05-28 | ✅ COMPLETE | 本文件即驗收產出物 |
+| ccode Skill 派工實測（verify） | 2026-05-28 | ✅ SKILL_VERIFY_PASS | Worker 8/8 規則驗證通過 |
 
 ---
 
 ## 任務佇列（READY_QUEUE）
 
-### ⏳ QUEUED: ccode Skill 派工實測
+### ✅ COMPLETE: ccode Skill 派工實測（verify）
 
-**優先級**: HIGH  
-**說明**: 從 13 項 ccode Skills 中選 1 項，走完完整 QUEUED → READY → DISPATCHED 流程，驗證 WORKER_DISPATCH_TEMPLATE 注入在實際 Skill 派工中生效。  
-**建議 Skill**: `verify`（驗證代碼變更，無破壞性副作用）  
-**執行方式**: Skill 工具 + WORKER_DISPATCH_TEMPLATE 前綴注入  
+**完成時間**: 2026-05-28  
+**結果**: SKILL_VERIFY_PASS — Worker 執行 8/8 規則驗證通過，WORKER_DISPATCH_TEMPLATE 注入已確認生效  
+**最新 commit**: 568722a  
 
 ---
 
@@ -55,7 +55,7 @@ LOCK_HOLDER: JUKSY_MISSION_CONTROL_CLAUDE_CODE_V2
 | 1 | session-start-hook | ⏳ 待實測 | - |
 | 2 | update-config | ⏳ 待實測 | - |
 | 3 | keybindings-help | ⏳ 待實測 | - |
-| 4 | **verify** | ⏳ **下一個** | HIGH |
+| 4 | **verify** | ✅ **已實測** | COMPLETE |
 | 5 | code-review | ⏳ 待實測 | - |
 | 6 | simplify | ⏳ 待實測 | - |
 | 7 | fewer-permission-prompts | ⏳ 待實測 | - |
