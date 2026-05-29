@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "language": "traditional-chinese",
+  "permissions": {
+    "allow": ["Skill"]
+  },
+  "env": {
+    "JUKSY_MISSION_CONTROL": "JUKSY_MISSION_CONTROL_CLAUDE_CODE",
+    "CURRENT_TASK_LOCK": "enabled",
+    "GLOBAL_LANGUAGE": "traditional-chinese",
+    "CLAUDE_CODE_SHORTNAME": "ccode"
+  }
+}
