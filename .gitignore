@@ -132,6 +132,18 @@ ENV/
 env.bak/
 venv.bak/
 
+# 採購自動化系統 — 機敏檔案，永不進版控
+secrets/
+secrets/.env
+**/secrets/**
+*session.json
+ebay_session.json
+card_targets.json
+cards.json
+watch_artists.json
+*.cookies.json
+HUB_BOT_TOKEN*
+
 # Spyder project settings
 .spyderproject
 .spyproject
